@@ -111,7 +111,9 @@ while wait() do
     end
     
     if AntiAfk == true then
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/Rynkana1478/test/main/anti%20idle.txt'))();
+        local bb=game:service'VirtualUser'
+        bb:CaptureController()
+        bb:ClickButton2(Vector2.new())
     end
 end
 end)
