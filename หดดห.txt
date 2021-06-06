@@ -72,7 +72,7 @@ while wait() do
         hrp = game.Players.LocalPlayer.Character.PrimaryPart
         for i,v in pairs(workspace.NPCs:GetChildren()) do
             if AutoKillMobs == true then
-                if v:FindFirstChild('Head') and v:FindFirstChild('HumanoidRootPart') then
+                if v.Name == "BruteVillainBeach" and v:FindFirstChild('Head') and v:FindFirstChild('HumanoidRootPart') then
                     oldtime = tick()
                     repeat
                         hrp.CFrame = v:FindFirstChild('HumanoidRootPart').CFrame *CFrame.new(0,9,0)
