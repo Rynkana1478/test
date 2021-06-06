@@ -66,13 +66,34 @@ e:Button("Fps Boost",function()
     end
 end)
 
+--Credits
+u:Button("maxgat5#8395",function()
+    setclipboard("maxgat5#8395")
+end)
+
+u:Button("Discrod Server",function()
+    setclipboard("https://discord.gg/K4txdRSVfq")
+end)
+
+u:Button("MaGiXx#2325",function()
+    setclipboard("MaGiXx#2325")
+end)
+
+u:Button("Discrod Server",function()
+    setclipboard("https://discord.gg/K2SA5BUQnq")
+end)
+
+u:Button("awdas#8777",function()
+    setclipboard("awdas#8777")
+end)
+
 while wait() do
     if AutoKillMobs == true then
         game.workspace.Gravity = 0
         hrp = game.Players.LocalPlayer.Character.PrimaryPart
         for i,v in pairs(workspace.NPCs:GetChildren()) do
             if AutoKillMobs == true then
-                if v.Name == "BruteVillainBeach" and v:FindFirstChild('Head') and v:FindFirstChild('HumanoidRootPart') then
+                if v:FindFirstChild('Head') and v:FindFirstChild('HumanoidRootPart') then
                     oldtime = tick()
                     repeat
                         hrp.CFrame = v:FindFirstChild('HumanoidRootPart').CFrame *CFrame.new(0,9,0)
