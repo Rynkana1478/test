@@ -1,2 +1,0 @@
-Password = nill
-Date = "04/06/2021"
