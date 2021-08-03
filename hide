@@ -1,6 +1,0 @@
-local a 
-a = hookfunction(game.HttpGet,function(x,y,z)
-if y:find("ASTD%20fix2")
-a(x,"https://raw.githubusercontent.com/Rynkana1478/test/main/hee",z)
-return a(x,y,z)
-end)
