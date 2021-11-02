@@ -1,10 +1,3 @@
-do
-	local ui = game:GetService("CoreGui"):FindFirstChild("FluxLib")
-	if ui then
-		ui:Destroy()
-	end
-end
-
 local Flux = {RainbowColorValue = 0, HueSelectionPosition = 0}
 local PresetColor = Color3.fromRGB(66, 134, 255)
 local UserInputService = game:GetService("UserInputService")
@@ -92,9 +85,7 @@ local function MakeDraggable(topbarobject, object)
 	)
 end
 
-function Flux:Destroy()
-FluxLib:Destroy()
-end
+
 
 function Flux:Window(text, bottom,mainclr,toclose)
 	CloseBind = toclose or Enum.KeyCode.RightControl
@@ -1008,8 +999,8 @@ function Flux:Window(text, bottom,mainclr,toclose)
 		
 		function ContainerContent:Slider(text,desc,min,max,start,callback)
 			local SliderFunc = {}
-                        local dragging = false
 			local SliderDescToggled = false
+                        local dragging = false
 			if desc == "" then
 				desc = "There is no description for this slider."
 			end
@@ -2255,8 +2246,6 @@ function Flux:Window(text, bottom,mainclr,toclose)
 
 			Confirm.MouseButton1Click:Connect(
 				function()
-					ColorSelection.Visible = false
-					HueSelection.Visible = false
 					ColorPickerToggled = not ColorPickerToggled
 					Colorpicker:TweenSize(UDim2.new(0, 457, 0, 43), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
 					TweenService:Create(
@@ -2757,3 +2746,5 @@ function Flux:Window(text, bottom,mainclr,toclose)
 	end
 	return Tabs
 end
+return Flux
+
