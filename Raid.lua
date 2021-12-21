@@ -41,7 +41,7 @@ pcall(function()
         for i,v in pairs(game:GetService("Workspace").Mobs:GetChildren()) do
             repeat wait(.1)
                 noclip()
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0,-15,0)* CFrame.Angles(math.rad(90), 0, 0)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0,-9,0)* CFrame.Angles(math.rad(90), 0, 0)
                 game:GetService("ReplicatedStorage").Events.attack:FireServer("Slash")
             until _G.x == false or v.Humanoid.health == 0
             if type(v) == nil then
