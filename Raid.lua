@@ -1,3 +1,5 @@
+repeat wait() untill game:Isloaded 
+wait(5)
 setfflag("HumanoidParallelRemoveNoPhysics", "False")
 setfflag("HumanoidParallelRemoveNoPhysicsNoSimulate2", "False")
 setfflag("CrashPadUploadToBacktraceToBacktraceBaseUrl", "")
