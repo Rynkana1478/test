@@ -1,5 +1,6 @@
 repeat wait() until game:IsLoaded()
 wait(5)
+syn.queue_on_teleport([[loadstring(game:HttpGet('https://raw.githubusercontent.com/Rynkana1478/test/main/Raid.lua'))()]])
 setfflag("HumanoidParallelRemoveNoPhysics", "False")
 setfflag("HumanoidParallelRemoveNoPhysicsNoSimulate2", "False")
 setfflag("CrashPadUploadToBacktraceToBacktraceBaseUrl", "")
@@ -50,4 +51,4 @@ pcall(function()
     end
 
 end)
-syn.queue_on_teleport([[loadstring(game:HttpGet('https://raw.githubusercontent.com/Rynkana1478/test/main/Raid.lua'))()]])
+
