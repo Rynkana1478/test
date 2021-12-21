@@ -35,9 +35,6 @@ spawn(function()
         game:GetService("ReplicatedStorage").Events.attack:FireServer(unpack(args1))
     end
 end)
-local function moveto(target,x,y,z,angle)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = target.HumanoidRootPart.CFrame * CFrame.new(x,y,z)* CFrame.Angles(math.rad(angle), 0, 0)
-end
 pcall(function()
     while _G.x do wait()
         for i,v in pairs(game:GetService("Workspace").Mobs:GetChildren()) do
@@ -46,8 +43,11 @@ pcall(function()
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0,-15,0)* CFrame.Angles(math.rad(90), 0, 0)
                 game:GetService("ReplicatedStorage").Events.attack:FireServer("Slash")
             until _G.x == false or v.Humanoid.health == 0
+            if type(v) == nil then
+                game:GetService("ReplicatedStorage").Events.drink:FireServer()
+            end
         end
     end
-    game:GetService("ReplicatedStorage").Events.drink:FireServer()
+
 end)
 syn.queue_on_teleport([[loadstring(game:HttpGet('https://raw.githubusercontent.com/Rynkana1478/test/main/Raid.lua'))()]])
