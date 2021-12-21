@@ -50,4 +50,4 @@ pcall(function()
     end
     game:GetService("ReplicatedStorage").Events.drink:FireServer()
 end)
-syn.queue_on_teleport([[loadstring(game:HttpGet('https://raw.githubusercontent.com/Rynkana1478/test/main/Raid'))()]])
+syn.queue_on_teleport([[loadstring(game:HttpGet('https://raw.githubusercontent.com/Rynkana1478/test/main/Raid.lua'))()]])
