@@ -1,4 +1,4 @@
-repeat wait() until game:Isloaded()
+repeat wait() until game:IsLoaded()
 wait(5)
 setfflag("HumanoidParallelRemoveNoPhysics", "False")
 setfflag("HumanoidParallelRemoveNoPhysicsNoSimulate2", "False")
