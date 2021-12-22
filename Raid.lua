@@ -66,6 +66,24 @@ pcall(function()
                             }
                         }
                     }
+                    local args2 = {
+                        [1] = "Sell",
+                        [2] = {
+                            [1] = {
+                                [1] = "1",
+                                [2] = 1
+                            }
+                        }
+                    }
+                    local args4 = {
+                        [1] = "Open",
+                        [2] = "666"
+                    }
+                    
+                    game:GetService("ReplicatedStorage").Events.inventory:FireServer(unpack(args4))
+                    wait(1)
+                    game:GetService("ReplicatedStorage").Events.inventory:FireServer(unpack(args2))
+                    wait(1)
                     game:GetService("ReplicatedStorage").Events.drink:FireServer()
                     wait(1)
                     game:GetService("ReplicatedStorage").Events.inventory:FireServer(unpack(args))
