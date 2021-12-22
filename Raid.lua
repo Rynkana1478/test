@@ -58,14 +58,6 @@ pcall(function()
                             }
                         }
                     }
-                    local args2 = {
-                        [1] = "Sell",
-                        [2] = {
-                            [1] = {
-                                [1] = "A4"
-                            }
-                        }
-                    }
                     local args3 = {
                         [1] = "Sell",
                         [2] = {
@@ -77,8 +69,6 @@ pcall(function()
                     game:GetService("ReplicatedStorage").Events.drink:FireServer()
                     wait(1)
                     game:GetService("ReplicatedStorage").Events.inventory:FireServer(unpack(args))
-                    wait(1)
-                    game:GetService("ReplicatedStorage").Events.inventory:FireServer(unpack(args2))
                     wait(1)
                     game:GetService("ReplicatedStorage").Events.inventory:FireServer(unpack(args3))
     end
