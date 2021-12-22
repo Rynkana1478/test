@@ -66,3 +66,4 @@ game.Players.LocalPlayer.CharacterAdded:connect(function()
 	end
     _G.farm = game:GetService('RunService').Stepped:Connect(farm)
 end)
+_G.farm = game:GetService('RunService').Stepped:Connect(farm)
