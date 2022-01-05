@@ -38,55 +38,21 @@ function swing()
     game:GetService("ReplicatedStorage").Events.attack:FireServer("T") 
     game:GetService("ReplicatedStorage").Events.attack:FireServer("E")
 end
-pcall(function()
-    while _G.x do wait()
-        for i,v in pairs(game:GetService("Workspace").Mobs:GetChildren()) do
+function totarget(Part,range)
+    local y = range + Part.Size.Y/2
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Part.CFrame* CFrame.new(0,-y,0)*CFrame.Angles(math.rad(90),0,0)
+end
+function farm()
+    for i,v in pairs(game:GetService("Workspace").Mobs:GetChildren()) do
+        if not v:FindFirstChild('Immune') then 
             repeat wait(.1)
+                totarget(v.hitbox,5)
                 togNoclip()
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0,-9,0)* CFrame.Angles(math.rad(90), 0, 0)
                 swing()
-            until _G.x == false or v.Humanoid.health == 0 or not v
+            until _G.x == false or v.Humanoid.health == 0 or v:FindFirstChild('Immune')
         end
-        local args = {
-                        [1] = "Sell",
-                        [2] = {
-                            [1] = {
-                                [1] = "21"
-                            },
-                            [2] = {
-                                [1] = "21"
-                            }
-                        }
-                    }
-                    local args3 = {
-                        [1] = "Sell",
-                        [2] = {
-                            [1] = {
-                                [1] = "22"
-                            }
-                        }
-                    }
-                    local args2 = {
-                        [1] = "Sell",
-                        [2] = {
-                            [1] = {
-                                [1] = "1",
-                                [2] = 1
-                            }
-                        }
-                    }
-                    local args4 = {
-                        [1] = "Open",
-                        [2] = "666"
-                    }
-                    game:GetService("ReplicatedStorage").Events.drink:FireServer()
-                    wait(1)
-                    game:GetService("ReplicatedStorage").Events.inventory:FireServer(unpack(args2))
-                    wait(1)
-                    game:GetService("ReplicatedStorage").Events.inventory:FireServer(unpack(args4))
-                    wait(1)
-                    game:GetService("ReplicatedStorage").Events.inventory:FireServer(unpack(args))
-                    wait(1)
-                    game:GetService("ReplicatedStorage").Events.inventory:FireServer(unpack(args3))
     end
-end)
+end
+while wait() do wait(1)
+farm()
+end
