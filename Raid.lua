@@ -51,8 +51,14 @@ function farm()
                 swing()
             until _G.x == false or v.Humanoid.health == 0 or v:FindFirstChild('Immune')
         end
+        game:GetService("ReplicatedStorage").Events.drink:FireServer()
+        local args = {
+            [1] = "Open",
+            [2] = "6666"
+        }
+        game:GetService("ReplicatedStorage").Events.inventory:FireServer(unpack(args))
     end
 end
 while wait() do wait(1)
-farm()
+    farm()
 end
