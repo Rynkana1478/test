@@ -56,6 +56,24 @@ function farm()
             [2] = "6666"
         }
         game:GetService("ReplicatedStorage").Events.inventory:FireServer(unpack(args))
+        local args = {
+            [1] = "Sell",
+            [2] = {
+                [1] = {
+                    [1] = "96"
+                },
+                [2] = {
+                    [1] = "95"
+                },
+                [3] = {
+                    [1] = "93"
+                },
+                [4] = {
+                    [1] = "88"
+                }
+            }
+        }
+        game:GetService("ReplicatedStorage").Events.inventory:FireServer(unpack(args))
     end
 end
 while wait() do 
