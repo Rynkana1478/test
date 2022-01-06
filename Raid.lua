@@ -28,13 +28,6 @@ if _G.CNOCLIP then
 end
 _G.CNOCLIP = game:GetService('RunService').Stepped:Connect(NoclipLoop)
 end
-spawn(function()
-    while _G.x do wait(1)
-        vi:SendKeyEvent(true, "Q", false, game)
-        vi:SendKeyEvent(true, "E", false, game)
-        vi:SendKeyEvent(true, "R", false, game)
-    end
-end)
 function swing()
     game:GetService("ReplicatedStorage").Events.attack:FireServer("Slash")
     game:GetService("ReplicatedStorage").Events.attack:FireServer("T") 
@@ -51,6 +44,9 @@ function farm()
                 totarget(v.hitbox,3)
                 togNoclip()
                 swing()
+                vi:SendKeyEvent(true, "Q", false, game)
+                vi:SendKeyEvent(true, "E", false, game)
+                vi:SendKeyEvent(true, "R", false, game)
             until _G.x == false or v.Humanoid.health == 0 or v:FindFirstChild('Immune')
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame* CFrame.new(0,55,0)*CFrame.Angles(math.rad(0),0,0)
         end
