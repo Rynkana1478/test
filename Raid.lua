@@ -71,6 +71,12 @@ function farm()
                 [4] = {
                     [1] = "88"
                 }
+                [5] = {
+                    [1] = "94"
+                },
+                [6] = {
+                    [1] = "86"
+                },
             }
         }
         game:GetService("ReplicatedStorage").Events.inventory:FireServer(unpack(args))
