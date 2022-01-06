@@ -1,5 +1,7 @@
 repeat wait() until game:IsLoaded()
-wait(10)
+for i,v in pairs(game:GetService("Workspace").Mobs:GetChildren()) do
+        repeat wait() until v
+end
 _G.x = true
 _G.NoCIP = _G.x
 syn.queue_on_teleport([[loadstring(game:HttpGet('https://raw.githubusercontent.com/Rynkana1478/test/main/Raid.lua'))()]])
