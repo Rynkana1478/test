@@ -62,6 +62,7 @@ function farm()
         game:GetService("ReplicatedStorage").Events.inventory:FireServer(unpack(args))
     end
 end
-while wait() do wait(1)
-farm()
+while wait() do 
+        farm()
+        wait(1)
 end
