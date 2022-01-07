@@ -40,6 +40,7 @@ end
 function farm()
     for i,v in pairs(game:GetService("Workspace").Mobs:GetChildren()) do
         if not v:FindFirstChild('Immune') then 
+                        pcall(funciton()
             repeat wait(.1)
                 totarget(v.hitbox,3)
                 togNoclip()
@@ -49,7 +50,8 @@ function farm()
                 vi:SendKeyEvent(true, "R", false, game)
             until _G.x == false or v.Humanoid.health == 0 or v:FindFirstChild('Immune')
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame* CFrame.new(0,55,0)*CFrame.Angles(math.rad(0),0,0)
-        end
+        end)
+                        end
         game:GetService("ReplicatedStorage").Events.drink:FireServer()
         local args = {
             [1] = "Open",
