@@ -40,7 +40,7 @@ end
 function farm()
     for i,v in pairs(game:GetService("Workspace").Mobs:GetChildren()) do
         if not v:FindFirstChild('Immune') then 
-                        pcall(funciton()
+                        pcall(function()
             repeat wait(.1)
                 totarget(v.hitbox,3)
                 togNoclip()
