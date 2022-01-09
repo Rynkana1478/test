@@ -80,15 +80,27 @@ function farm()
                     [1] = "86"
                 },
                 [7] = {
-                        [1] = "70"
+                    [1] = "70"
                 },
                 [8] = {
-                        [1] = "71"
+                    [1] = "71"
                 },
                 [9] = {
-                        [1] = "A7"
+                    [1] = "A7"
                 }
-        }}
+                [10] = {
+                    [1] = "05",
+                    [2] = 1
+                },
+                [11] = {
+                    [1] = "01",
+                    [2] = 1
+                },
+                [12] = {
+                    [1] = "5",
+                    [2] = 1
+                }
+            }}
         game:GetService("ReplicatedStorage").Events.inventory:FireServer(unpack(args))
     end
 end
