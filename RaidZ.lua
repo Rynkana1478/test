@@ -88,7 +88,7 @@ function farm()
                 [9] = {
                         [1] = "A7"
                 }
-        }
+        }}
         game:GetService("ReplicatedStorage").Events.inventory:FireServer(unpack(args))
     end
 end
