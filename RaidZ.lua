@@ -2,6 +2,7 @@ repeat wait() until game:IsLoaded()
 for i,v in pairs(game:GetService("Workspace").Mobs:GetChildren()) do
         repeat wait() until v
 end
+wait(2)
 _G.x = true
 _G.NoCIP = _G.x
 syn.queue_on_teleport([[loadstring(game:HttpGet('https://raw.githubusercontent.com/Rynkana1478/test/main/RaidZ.lua'))()]])
@@ -41,7 +42,7 @@ function farm()
     for i,v in pairs(game:GetService("Workspace").Mobs:GetChildren()) do
         if not v:FindFirstChild('Immune') then 
                         pcall(function()
-            repeat wait(.1)
+            repeat wait(.5)
                 totarget(v.hitbox,3)
                 togNoclip()
                 swing()
@@ -49,6 +50,7 @@ function farm()
                 vi:SendKeyEvent(true, "E", false, game)
                 vi:SendKeyEvent(true, "R", false, game)
             until _G.x == false or v.Humanoid.health == 0 or v:FindFirstChild('Immune')
+                                        wait(1)
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame* CFrame.new(0,55,0)*CFrame.Angles(math.rad(0),0,0)
         end)
                         end
