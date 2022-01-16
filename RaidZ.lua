@@ -50,7 +50,7 @@ function farm()
                 vi:SendKeyEvent(true, "E", false, game)
                 vi:SendKeyEvent(true, "R", false, game)
             until _G.x == false or v.Humanoid.health == 0 or v:FindFirstChild('Immune')
-                                        wait(1)
+                                        wait(.1)
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame* CFrame.new(0,55,0)*CFrame.Angles(math.rad(0),0,0)
         end)
                         end
