@@ -1,0 +1,4 @@
+_G.Keys = "1Q1R8-HSTYY-JDOHC"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Xenon-Trash/Loader/main/Loader.lua"))();
+syn.queue_on_teleport([[_G.Keys = "1Q1R8-HSTYY-JDOHC"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Xenon-Trash/Loader/main/Loader.lua"))();]])
